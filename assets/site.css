@@ -2,4 +2,4 @@
 /* Mobile navigation interaction refinements. */
 .site-head{position:relative}
 .nav-toggle{min-width:44px;min-height:44px;font:inherit;cursor:pointer}
-@media(max-width:760px){.site-head nav{top:calc(100% - 1px)}}
+@media(max-width:760px){.site-head nav{top:calc(100% + 1px)}}
