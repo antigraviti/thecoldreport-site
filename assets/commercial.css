@@ -1,0 +1,38 @@
+.opp-card .card-link {
+  border-top: 1px solid var(--rule);
+  margin-top: 18px;
+  padding-top: 15px;
+  font-size: 13px;
+  font-weight: 800;
+  text-decoration: none;
+}
+.billing-note { display: block; color: var(--muted); font-size: 12px; margin: 4px 0 12px; }
+.pricing-grid { grid-template-columns: repeat(2, 1fr); }
+.method { background: var(--white); padding: 50px; margin-block: 30px; }
+.signal-grid { display: grid; grid-template-columns: repeat(6, 1fr); border: 1px solid var(--ink); margin: 28px 0; }
+.signal-grid div { padding: 20px 12px; border-right: 1px solid var(--rule); display: grid; gap: 8px; }
+.signal-grid div:last-child { border: 0; }
+.signal-grid strong { font: 500 2.1rem var(--serif); color: var(--navy); }
+.signal-grid span { font-size: 12px; }
+.decision-panel { background: var(--navy); color: #fff; padding: 42px; margin-bottom: 35px; }
+.decision-panel .eyebrow { color: #b9daf3; }
+.decision-panel h2 { font-size: clamp(1.5rem, 3vw, 2.35rem); max-width: 900px; }
+.decision-panel > div { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; border-top: 1px solid #55728d; margin-top: 28px; padding-top: 24px; }
+.decision-panel p { font-size: 14px; }
+.evidence-key { display: flex; gap: 24px; padding: 20px 0; border-bottom: 1px solid var(--rule); font-size: 12px; text-transform: uppercase; letter-spacing: .08em; flex-wrap: wrap; }
+.evidence-key b { display: inline-block; width: 10px; height: 10px; margin-right: 6px; }
+.evidence-key .confirmed { background: #26734d; }
+.evidence-key .inferred { background: #ca7b25; }
+.evidence-key .unknown { background: #747b82; }
+.confirmed-block { border-top: 4px solid #26734d; }
+.inferred-block { border-top: 4px solid #ca7b25; }
+.unknown-block { border-top: 4px solid #747b82; }
+@media (max-width: 760px) {
+  .pricing-grid { grid-template-columns: 1fr; }
+  .method { padding: 32px 20px; }
+  .signal-grid { grid-template-columns: repeat(2, 1fr); }
+  .signal-grid div:nth-child(2n) { border-right: 0; }
+  .decision-panel { padding: 30px 20px; margin-inline: -18px; }
+  .decision-panel > div { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 420px) { .decision-panel > div { grid-template-columns: 1fr; } }
