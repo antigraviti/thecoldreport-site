@@ -106,3 +106,54 @@ section { padding-block: 56px; }
   .process li:last-child { border-bottom: 0; }
   .site-foot { grid-template-columns: 1fr; }
 }
+
+/* Founding Radar application: a serious qualification flow, not a generic contact form. */
+.application-head { max-width: 980px; }
+.application-expectations { display: grid; grid-template-columns: repeat(3, 1fr); padding: 0; border: 1px solid var(--ink); }
+.application-expectations > div { display: grid; align-content: start; gap: 7px; padding: 27px; }
+.application-expectations > div + div { border-left: 1px solid var(--rule); }
+.application-expectations span, .form-step { color: var(--blue); font: 800 11px/1.2 var(--sans); letter-spacing: .11em; text-transform: uppercase; }
+.application-expectations strong { font: 500 1.45rem/1.2 var(--serif); }
+.application-expectations p { color: var(--muted); font-size: 14px; margin: 0; }
+.application-shell { display: grid; grid-template-columns: .7fr 1.3fr; gap: 6vw; align-items: start; }
+.application-intro { position: sticky; top: 30px; }
+.application-intro h2 { font-size: clamp(2rem, 3.5vw, 3.15rem); }
+.application-intro li { margin-bottom: 10px; }
+.radar-application { display: grid; gap: 22px; }
+.form-section { background: var(--white); border: 1px solid var(--rule); padding: 30px; display: grid; gap: 23px; }
+.form-step { margin: 0; padding-bottom: 16px; border-bottom: 1px solid var(--rule); }
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.radar-application label { display: grid; gap: 7px; font-size: 14px; font-weight: 750; }
+.radar-application input, .radar-application select, .radar-application textarea { width: 100%; border: 1px solid #777d82; border-radius: 0; background: #fff; color: var(--ink); padding: 12px; font: inherit; }
+.radar-application textarea { resize: vertical; min-height: 150px; }
+.radar-application textarea:focus-visible { outline: 3px solid #de8b32; outline-offset: 3px; }
+.radar-application fieldset { border: 0; padding: 0; margin: 0; }
+.radar-application legend { width: 100%; margin-bottom: 12px; font-size: 14px; font-weight: 800; }
+.radar-application legend span { color: var(--muted); font-size: 12px; font-weight: 500; margin-left: 5px; }
+.choice-grid { display: grid; grid-template-columns: repeat(2, 1fr); border: 1px solid var(--rule); }
+.choice-grid label { display: flex; align-items: center; gap: 10px; min-height: 50px; padding: 10px 12px; font-weight: 600; border-right: 1px solid var(--rule); border-bottom: 1px solid var(--rule); cursor: pointer; }
+.choice-grid label:nth-child(2n) { border-right: 0; }
+.choice-grid input, .consent input { width: auto; flex: 0 0 auto; }
+.consent { grid-template-columns: auto 1fr; align-items: start; font-weight: 500 !important; }
+.consent input { margin-top: 5px; }
+.honeypot { position: absolute !important; left: -10000px !important; width: 1px !important; height: 1px !important; overflow: hidden !important; }
+.field-error { color: #8b241f; font-size: 13px; font-weight: 800; margin: 8px 0 0; }
+.radar-application fieldset.invalid { border-left: 4px solid #a4352f; padding-left: 14px; }
+.radar-application button[disabled] { cursor: wait; opacity: .65; }
+.form-status { display: grid; gap: 4px; border-left: 5px solid var(--blue); background: #eef5fa; padding: 16px 18px; }
+.form-status.success { border-color: #26734d; background: #eaf4ed; }
+.form-status.error { border-color: #a4352f; background: #faeeec; }
+.application-unavailable { margin: 0; }
+
+@media (max-width: 840px) {
+  .application-shell { grid-template-columns: 1fr; }
+  .application-intro { position: static; }
+}
+
+@media (max-width: 760px) {
+  .application-expectations { grid-template-columns: 1fr; }
+  .application-expectations > div + div { border-left: 0; border-top: 1px solid var(--rule); }
+  .form-grid, .choice-grid { grid-template-columns: 1fr; }
+  .choice-grid label { border-right: 0; }
+  .form-section { padding: 24px 18px; }
+}
