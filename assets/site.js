@@ -35,7 +35,7 @@ if (radarForm) {
   requiredGroup?.addEventListener('change', () => showCategoryError(!hasCategory()));
   radarForm.addEventListener('submit', async (event) => {
     event.preventDefault();
-    if (!hasCategory()) {
+    if (requiredGroup && !hasCategory()) {
       showCategoryError(true);
       requiredGroup?.scrollIntoView({ behavior: 'smooth', block: 'center' });
       return;
@@ -55,14 +55,15 @@ if (radarForm) {
         body: new FormData(radarForm),
       });
       const result = await response.json().catch(() => ({}));
-      if (!response.ok) throw new Error(result.error || 'Submission failed');
+      if (!response.ok || result.ok !== true) throw new Error(result.error || 'Submission failed');
       radarForm.reset();
       status.className = 'form-status success';
-      status.innerHTML = '<strong>Application received.</strong><span>We will review the mandate and reply personally. Your reference is ' + String(result.id || 'recorded') + '.</span>';
+      const reference = /^[A-F0-9]{8}$/.test(result.id || '') ? ' Reference: ' + result.id + '.' : '';
+      status.textContent = 'Sample request received. We’ll reply by email.' + reference;
       submit.textContent = 'Application submitted';
     } catch (error) {
       status.className = 'form-status error';
-      status.innerHTML = '<strong>We could not submit this application.</strong><span>No information was recorded. Please try again or email <a href="mailto:hello@thecoldreport.com?subject=Radar%20application">hello@thecoldreport.com</a>.</span>';
+      status.innerHTML = '<strong>We couldn’t send your sample request.</strong><span>We couldn’t confirm receipt. Please try again or email <a href="mailto:hello@thecoldreport.com?subject=Radar%20application">hello@thecoldreport.com</a>.</span>';
       submit.disabled = false;
       submit.textContent = 'Try submission again';
     }
