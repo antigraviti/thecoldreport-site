@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-11-19
+
+- Codex: Published the verified Mid-Atlantic project tracker, added editorial attribution and update histories, and excluded demonstration pages from search indexing.
+
 ## 2026-11-18
 
 - Redesigned the homepage around the sourced Dover project, the free Brief, and Radar’s territory sample.
