@@ -2,6 +2,9 @@
 
 ## 2026-11-18
 
+- Redesigned the homepage around the sourced Dover project, the free Brief, and Radar’s territory sample.
+- Removed the inaccurate Sargon Labs attribution across the site, including the privacy notice and terms.
+
 - Clarified how to request the free brief by email on the homepage, brief archive, and subscribe page.
 - Published the sourced Dover cold-storage watch record and a November 18 brief.
 - Focused the homepage and navigation on Radar and The Brief.
