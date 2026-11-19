@@ -2,6 +2,7 @@
 
 ## 2026-11-18
 
+- Clarified how to request the free brief by email on the homepage, brief archive, and subscribe page.
 - Published the sourced Dover cold-storage watch record and a November 18 brief.
 - Focused the homepage and navigation on Radar and The Brief.
 - Replaced the long founding application with a short territory-sample form and aligned the public offer with a 60-day pilot.
