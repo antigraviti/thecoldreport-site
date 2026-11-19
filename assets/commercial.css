@@ -204,10 +204,10 @@ section { padding-block: 56px; }
 }
 .home-pitch .home-kicker { color: var(--dock-cyan); }
 .home-pitch h1 {
-  max-width: 11ch;
+  max-width: 15ch;
   margin: .95rem 0 1.2rem;
   color: #fff;
-  font: 500 clamp(2.8rem, 6.05vw, 5.45rem)/.96 var(--serif);
+  font: 500 clamp(2.5rem, 5vw, 4.35rem)/.96 var(--serif);
   letter-spacing: -.062em;
   text-wrap: balance;
 }
@@ -296,7 +296,7 @@ section { padding-block: 56px; }
 @media (max-width: 790px) {
   .home-lead, .home-desk, .home-reader { grid-template-columns: minmax(0, 1fr); }
   .home-lead::before { inset: 0 0 39% 0; }
-  .home-pitch h1 { max-width: 13ch; font-size: clamp(2.7rem, 8vw, 4.1rem); }
+  .home-pitch h1 { font-size: clamp(2.45rem, 8vw, 4.1rem); }
   .home-pilot, .home-standards { padding: 1.15rem 0 0; border-left: 0; border-top: 1px solid var(--dock-rule); }
 }
 @media (max-width: 420px) {
